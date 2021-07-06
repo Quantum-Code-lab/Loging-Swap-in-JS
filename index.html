@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="include/bootstrap-5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="include/responsive.css">
+    <!-- <link rel="stylesheet" href="include/fontawesome-free-5.15.3-web/css/all.min.css"> -->
+    <script src="https://kit.fontawesome.com/3f8b7f7cc7.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script> 
+</head>
+<body>
+    <header>
+        <span><i class="fab fa-teamspeak"></i></span>
+        <div class="multi-log">
+            <a href="#" onclick="student()" aria-hidden="true"><i class="fas fa-user-astronaut" ><p>login as student</p></i></a>
+            <a href="#" onclick="admin()" aria-hidden="true"><i class="fas fa-user-secret"><p>login as admin</p></i></a>
+        </div>       
+    </header>
+    <!-- For Student Login -->
+    <main id="navbar1"> 
+        <div class="student"><a href="#" style="color: #13fff3;"><i class="fas fa-user-astronaut"></i></a></div>
+        <div class="card-body iax">
+            Student Login
+          </div>
+        <div class="container col-md-9">
+            <form action="#" method="POST">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" name="student_id" placeholder="Student ID" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text pass" id="addon-wrapping"><i class="far fa-envelope"></i></span>
+                    <input type="email" class="form-control" name="student_mail" placeholder="Student Mail" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <p class="oes_err">
+                    <?php
+                        if (isset($Errors['student_mail'])) 
+                        {
+                            echo $Errors['student_mail'];
+                        }
+                    ?>
+                </p>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text pass" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                    <input type="password" class="form-control" id="xyz" name="student_key" placeholder="Student Password" aria-label="Username" aria-describedby="addon-wrapping">
+                    <span class="input-group-text eye" id="addon-wrapping" onclick="myFunction()">
+                        <i class="far fa-eye" id="open"></i>
+                        <i class="far fa-eye-slash" id="close"></i>
+                    </span>
+                </div>
+                <p class="oes_err">
+                    <?php
+                        if (isset($Errors['student_key'])) 
+                        {
+                            echo $Errors['student_key'];
+                        }
+                    ?>
+                </p>
+
+                <button type="submit" name="submit" class="submit-btn">Dark</button>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- For Admin Login -->
+
+    <main class="Admin" id="navbar2"> 
+        <div class="student"><a href="#" style="color: #13fff3;"><i class="fas fa-user-secret"></i></a></div>
+        <div class="card-body iax">
+            Admin Login
+          </div>
+        <div class="container col-md-9">
+            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text pass" id="addon-wrapping"><i class="far fa-envelope"></i></span>
+                    <input type="email" class="form-control" placeholder="Admin Mail" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text pass" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                    <input type="password" class="form-control" id="xyz" placeholder="Admin Password" aria-label="Username" aria-describedby="addon-wrapping">
+                    <span class="input-group-text eye" id="addon-wrapping" onclick="myFunction()">
+                        <i class="far fa-eye" id="open"></i>
+                        <i class="far fa-eye-slash" id="close"></i>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <button type="submit" class="submit-btn" name="submit" >Dark</button>
+    </main>
+</body>
+<!-- on scroll animation -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</html>

@@ -1,0 +1,241 @@
+*{margin: 0; padding: 0;outline: 0;}
+@font-face 
+{
+    font-family: FontA;
+    src: url(include/fonts/Casanova.ttf);
+    font-family: FontB;
+    src: url(include/fonts/BebasNeue-Regular.ttf);
+    font-family: FontC;
+    src: url(include/fonts/Raleway-Medium.ttf);
+    font-family: FontD;
+    src: url(include/fonts/Daecca-Regular.ttf);
+    font-family: FontE;
+    src: url(include/fonts/Raleway-Regular.ttf);
+}
+body
+{
+    width: 100%;
+    height: auto;
+    /* min-height: 50vh; */
+    background-color: #079992;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+	flex-wrap: wrap;
+	padding-bottom: 2rem;
+}
+header
+{
+    width: 100%;
+    height: 5.5rem;
+    background-color:#38ada9;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.multi-log
+{
+
+	width: 38%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: .4rem;
+	position: relative;
+	left: 23.3%;
+}
+.multi-log a 
+{
+
+	font-size: 3.5rem;
+	text-align: center;
+	color: #29fff4;
+}
+.multi-log p
+{
+	font-family: FontE;
+	font-size: .9rem;
+	text-transform:uppercase;
+	letter-spacing: .2rem;
+	color: #fff;
+	padding-top: .4rem;
+
+}
+.multi-log p:hover
+{
+	color: rgb(47, 243, 96);
+	cursor: pointer;
+}
+span
+{
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+main 
+{
+	width: 31%;
+	height: 72vh;
+	margin: 0 auto;
+	background-color: #07a79f;
+	box-sizing: border-box;
+	box-shadow: 2px 2px 15px #1efbf0 inset, -2px -2px 15px #1efbf0 inset;
+	position: relative;
+	z-index: 100;
+	top: 4.5rem;
+	/* display: none; */
+	animation: drop 1s ease forwards;
+	position: relative;
+}
+@keyframes drop
+{
+	0%{opacity: 0;}
+	50%{transform: translateY(10px)}
+	100%{transform:translateY(0px);opacity: 1;}
+}
+.student 
+{
+	margin: 0 auto;
+	width: 7rem;
+	height: 7rem;
+	background-color: #10938c;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 5px 10px #e4e2e2 inset,-5px -5px 10px inset;
+	border-radius: 50%;
+	position: relative;
+	top: -56px;
+    z-index: 10;
+}
+.student a 
+{
+	width: 25%;
+	font-size: 4rem;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+}
+form
+{
+    width: 100%;
+}
+form .oes_err
+{
+		font-size: .9rem;
+		color: #fff25c;
+		margin: 0px;
+}
+.input-group 
+{
+	margin-top: .5rem;
+}
+input[type="text"], input[type="email"], input[type="password"] 
+{
+	/* text-align: center; */
+	background-color: #32948f;
+	border-radius: 20px;
+	/* border-left: none; */
+	border: none;
+	box-shadow: 5px 5px 10px inset #306a68,-5px -5px 10px inset #22d4cd;
+	margin-bottom: .5rem;
+	
+}
+.eye 
+{
+	position: relative;
+	width: 3rem;
+	border-radius: 20px;
+	background: #31948f;
+	border: none;
+	color: #13fff3;
+	box-shadow: 5px 5px 10px inset #306a68,-5px -5px 10px inset #22d4cd;
+	margin-bottom: .5rem;
+
+}
+
+#open
+{
+    display: none;
+}
+/* #close{display: none;} */
+#open,#close
+{
+    background: transparent;
+}
+.form-control::placeholder 
+{
+	color: #b7d8f5;
+	opacity: 1;
+}
+input[type="text"]:focus,input[type="email"]:focus, input[type="password"]:focus
+{
+	background-color:#5c7c86;
+	border: 1px solid#fff;
+	border-radius: 20px;
+	/* border: none; */
+}
+input[type=password]
+{
+    border-right: none;
+	box-shadow: 5px 5px 10px inset #306a68,-5px -5px 10px inset #22d4cd;
+}
+.pass 
+{
+	position: relative;
+	border-radius: 20px;
+	background: #32948f;
+	box-shadow: 5px 5px 10px inset #306a68,-5px -5px 10px inset #22d4cd;
+	color: #13fff3;
+	width: 3rem;
+	border: none;
+	margin-bottom: .5rem;
+}
+#xyz
+{
+	/* border: none; */
+	border-left-style: none;
+	border-right-style: none;
+}
+.submit-btn
+{
+	width: 6.5rem;
+	background: #0C7671;
+	border: none;
+	height: 2rem;
+	border-radius: 25px;
+	position: absolute;
+	left: 39.1%;
+	margin-top: .5rem;
+    padding-bottom:2px;
+}
+.iax
+{
+	background: #806f6f59;
+	font-family: FontE;
+	font-size: 1.5rem;
+	letter-spacing: .2rem;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 1rem;
+	box-shadow: 5px 5px 10px #18e9df inset,-5px -5px 10px #18e9df inset;
+	width: 85%;
+	margin: 0 auto;
+	color: #fff;
+	position: relative;
+	top: -25px;
+}
+.Admin
+{
+	display: none;
+}
